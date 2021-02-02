@@ -223,52 +223,52 @@ function changeBackground(data) {
 
     switch(data.list[0].weather[0].main) {
         case "Thunderstorm":
-            document.documentElement.style.background = "url(/Images/Thunderstorm.jpg) no-repeat center center fixed";
+            document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/Thunderstorm.jpg) no-repeat center center fixed";
             break;
         case "Drizzle":
-            document.documentElement.style.background = "url(/Images/rainn.jpg) no-repeat center center fixed";
+            document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/rainn.jpg) no-repeat center center fixed";
             break;
         case "Rain":
-            document.documentElement.style.background = "url(/Images/rainn.jpg) no-repeat center center fixed";
+            document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/rainn.jpg) no-repeat center center fixed";
             break;
         case "Snow":
-            document.documentElement.style.background = "url(/Images/snoww.jpg) no-repeat center center fixed";
+            document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/snoww.jpg) no-repeat center center fixed";
             break;
         case "Mist":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Smoke":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Haze":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Dust":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Fog":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Sand":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Ash":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Squall":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Tornado":
-             document.documentElement.style.background = "url(/Images/mist.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/mist.jpg) no-repeat center center fixed";
             break;
         case "Clear":
-             document.documentElement.style.background = "url(/Images/sun.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/sun.jpg) no-repeat center center fixed";
             break;
         case "Clouds":
-             document.documentElement.style.background = "url(/Images/cloudy.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/cloudy.jpg) no-repeat center center fixed";
             break;
         default:
-             document.documentElement.style.background = "url(/Images/sun.jpg) no-repeat center center fixed";
+             document.documentElement.style.background = "url(https://raw.githubusercontent.com/semir709/weather/master/Images/sun.jpg) no-repeat center center fixed";
     }
 
 }
