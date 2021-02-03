@@ -2,12 +2,17 @@ let input = document.getElementById("town").value;
 let apiKey = '&appid=aad38c8fbcc165680998b2cd7cfa2832';
 let units ='&units=metric';
 
-let press = false;
-let isDone = false;
 
 async function weather () {
+    let response;
+
+    if (location.protocol === 'http:') {
+        response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${input}${units}${apiKey}`);
+    }
+    else {
+        response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${input}${units}${apiKey}`);
+    }
     
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${input}${units}${apiKey}`);
     const data = await response.json();
 
     return data;
