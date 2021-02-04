@@ -1,6 +1,6 @@
 
 html{
-    background: url(/Images/sun.jpg) no-repeat center center fixed; 
+    background: url(https://raw.githubusercontent.com/semir709/weather/master/Images/sun.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -142,7 +142,7 @@ h5{
     font-weight: 100;
 }
 
-@media (max-width: 500px) {
+@media screen {
 
     html{
         background: url(/Images/sun.jpg) no-repeat center center fixed; 
@@ -185,5 +185,20 @@ h5{
         margin-top: 10px;
     }
     
+}
+
+@media (orientation:landscape) {
+    #cards{
+      
+        grid-template-columns: repeat(3,3fr);
+        grid-template-rows: repeat(3,2fr);
+        grid-column-gap: 10px;
+    
+    }
+
+    .time {
+        visibility: hidden;
+    }
+
 }
 
