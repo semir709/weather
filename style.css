@@ -1,6 +1,6 @@
 
 html{
-    background: url(https://raw.githubusercontent.com/semir709/weather/master/Images/sun.jpg) no-repeat center center fixed; 
+    background: url("https://raw.githubusercontent.com/semir709/weather/master/Images/sun.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
