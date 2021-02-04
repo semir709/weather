@@ -144,15 +144,6 @@ h5{
 
 @media screen {
 
-    html{
-        background: url(https://raw.githubusercontent.com/semir709/weather/master/Images/cloudy.jpg) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height: 100%;
-    }
-
     body{
         min-width: 100%;
         min-height: 100%;
