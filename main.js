@@ -110,17 +110,18 @@ function getMainData(data) {
     let timeApi;
     let months = ["01","02","03","04","05","06","07","08","09","10","11","12"];
     let chechkTime = false;
+    let setFirstday = false;
     morningTemp[0].innerHTML = "Morning temp: " + data.list[0].main.temp + "°C";
-    afternoonTemp[0].innerHTML = "Afternoon temp: " + data.list[0].main.temp + "°C";
-    eveningTemp[0].innerHTML = "Evening temp: " + data.list[1].main.temp + "°C"; //fix this 
+    //afternoonTemp[0].innerHTML = "Afternoon temp: " + data.list[0].main.temp + "°C";
+    //eveningTemp[0].innerHTML = "Evening temp: " + data.list[0].main.temp + "°C";
 
     let threePeriodOFTime = {
         morning: "06:00",
         afternoon: "12:00",
-        evening: "00:00" //api has problem when I set on 21:00 ????
+        evening: "21:00" 
     };
 
-    for(let i = 0; i < data.list.length - 1; i++) {
+    for(let i = 0; i < data.list.length; i++) {
         let dateApi = data.list[i].dt_txt.slice(0,10);
         let date;
 
@@ -133,37 +134,48 @@ function getMainData(data) {
        
 
         if(chechkTime == false) {
-            timeApi = data.list[0].dt_txt.slice(10,16);
+            timeApi =  data.list[0].dt_txt.slice(10,16);
             
             chechkTime = true;
         } 
+
+        if(date == dateApi) {
+            if(threePeriodOFTime.morning ==  data.list[i].dt_txt.slice(11,16)) {
+                morningTemp[j].innerHTML = "Morning temp: " + data.list[i].main.temp + "°C";
+               
+            }
+            
+            if(threePeriodOFTime.afternoon == data.list[i].dt_txt.slice(11,16)) {
+                afternoonTemp[j].innerHTML = "Afternoon temp: " + data.list[i].main.temp + "°C";
+                if(setFirstday == false) {
+                    
+                    afternoonTemp[0].innerHTML = "Afternoon temp: " + data.list[i].main.temp + "°C";
+                    setFirstday = true;
+                }
+                
+            }
     
-        if((date == dateApi) && data.list[i].dt_txt.slice(11,16) == threePeriodOFTime.morning) {
-            morningTemp[j].innerHTML = "Morning temp: " + data.list[i].main.temp + "°C";
-           
-        }
-        
-        if((date == dateApi) && data.list[i].dt_txt.slice(11,16) == threePeriodOFTime.afternoon) {
-            afternoonTemp[j].innerHTML = "Afternoon temp: " + data.list[i].main.temp + "°C";
-            console.log("sadadasd");
-        }
+           if(threePeriodOFTime.evening == data.list[i].dt_txt.slice(11,16)) {
+               eveningTemp[j].innerHTML = "Evening temp: " + data.list[i].main.temp + "°C";
 
-        if((date == dateApi) && data.list[i].dt_txt.slice(11,16) == threePeriodOFTime.evening) {
-            eveningTemp[j].innerHTML = "Evening temp: " + data.list[i].main.temp + "°C";
+               j++;
+    
+                if (j > 4) break;  
+            }
+
+            if(timeApi == data.list[i].dt_txt.slice(10,16)){
+
+                temp[j].innerHTML = data.list[i].main.temp + "°C";
+                time[j].innerHTML = timeApi;
+    
+                getPicAndDisc(data.list[i].weather, j);
+                
+            }
         }
         
-        if((date == dateApi) && (timeApi == data.list[i].dt_txt.slice(10,16))){
-
-            temp[j].innerHTML = data.list[i].main.temp + "°C";
-            time[j].innerHTML = timeApi;
-            getPicAndDisc(data.list[i].weather, j);
-            j++;
-
-            if (j > 4) break;
-            nextDay.setDate(nextDay.getDate() + 1);  
+        if(data.list[i].dt_txt.slice(11,16) == "00:00") {
+            nextDay.setDate(nextDay.getDate() + 1);
         }
-        
-        
     }
 }
 
