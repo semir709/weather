@@ -188,52 +188,52 @@ function getPicAndDisc(weatherData,index) {
     
     switch(weatherData[0].main) {
         case "Thunderstorm":
-            pic[index].src = " http://openweathermap.org/img/wn/11n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/11n@2x.png"
             break;
         case "Drizzle":
-            pic[index].src = " http://openweathermap.org/img/wn/09n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/09n@2x.png"
             break;
         case "Rain":
-            pic[index].src = " http://openweathermap.org/img/wn/10n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/10n@2x.png"
             break;
         case "Snow":
-            pic[index].src = " http://openweathermap.org/img/wn/13n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/13n@2x.png"
             break;
         case "Mist":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Smoke":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Haze":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Dust":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Fog":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Sand":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Ash":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Squall":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Tornado":
-            pic[index].src = " http://openweathermap.org/img/wn/50n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/50n@2x.png"
             break;
         case "Clear":
-            pic[index].src = " http://openweathermap.org/img/wn/01n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/01n@2x.png"
             break;
         case "Clouds":
-            pic[index].src = " http://openweathermap.org/img/wn/02n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/02n@2x.png"
             break;
         default:
-            pic[index].src = " http://openweathermap.org/img/wn/01n@2x.png"
+            pic[index].src = " https://openweathermap.org/img/wn/01n@2x.png"
     }
 }
 
