@@ -1,5 +1,7 @@
+import {MY_API_KEY} from './config.js';
+
 let input = document.getElementById("town").value;
-let apiKey = '&appid=aad38c8fbcc165680998b2cd7cfa2832';
+let apiKey = '&appid=' + MY_API_KEY;
 let units ='&units=metric';
 
 
@@ -20,12 +22,13 @@ async function weather () {
 
 
 document.getElementById('btn').addEventListener('click',function () {
+   
     input = document.getElementById("town").value;
 
 
     weather()
     .then(data => {
-        //console.log(data);
+        
 
        let cty = document.getElementsByClassName("city");
 
